@@ -26,13 +26,13 @@ export default function SpotlightCard({ children, className = '', spotlightColor
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-3xl overflow-hidden bg-[#11141C] border border-[#232836] transition-all duration-300 ${className}`}
+      className={`relative rounded-2xl overflow-hidden bg-white border border-[#EFECE6] transition-all duration-300 ${className}`}
     >
       <div
-        className="pointer-events-none absolute -inset-px transition-opacity duration-500 rounded-3xl"
+        className="pointer-events-none absolute -inset-px transition-opacity duration-500 rounded-2xl"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 40%)`,
+          background: `radial-gradient(500px circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 50%)`,
         }}
       />
       <div className="relative z-10">{children}</div>

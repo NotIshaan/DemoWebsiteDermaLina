@@ -39,13 +39,13 @@ export default function Treatments({ onOpenBooking, activeLang = 'en' }) {
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex items-center justify-center gap-2 flex-wrap mb-10">
+        {/* Category Filters (Mobile Swipeable) */}
+        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 mb-10 no-scrollbar">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
+              className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer shrink-0 whitespace-nowrap ${
                 activeCategory === cat
                   ? 'bg-[#1A1A1A] text-white shadow-xs'
                   : 'bg-white text-[#4A4A4A] hover:text-[#1A1A1A] border border-[#E5E2DA]'
