@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #FAFAFA;
+    color: #1A1A1A;
+    font-family: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    color: #1A1A1A;
+  }
+}
+
+/* Brand Palette Utilities */
+.bg-brand-offwhite {
+  background-color: #FAFAFA;
+}
+
+.bg-brand-gold {
+  background-color: #B08D57;
+}
+
+.bg-brand-gold-hover:hover {
+  background-color: #9A7947;
+}
+
+.text-brand-gold {
+  color: #B08D57;
+}
+
+.text-brand-charcoal {
+  color: #1A1A1A;
+}
+
+.border-brand-gold {
+  border-color: #B08D57;
+}
+
+.font-arabic {
+  font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+}
+
+/* ReactBits ShinyText Animation */
+@keyframes shiny-text {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shiny-text {
+  background: linear-gradient(
+    120deg,
+    #1A1A1A 25%,
+    #B08D57 50%,
+    #1A1A1A 75%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shiny-text 4s infinite linear;
+}
+
+/* Light Luxury Card Shadow */
+.light-card-luxury {
+  background-color: #FFFFFF;
+  border: 1px solid #EFECE6;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.light-card-luxury:hover {
+  border-color: #D6CEBE;
+  box-shadow: 0 15px 35px -5px rgba(176, 141, 87, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.03);
+}
+
+/* Custom Scrollbar for Light Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08D57;
+}
